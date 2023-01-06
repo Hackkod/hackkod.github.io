@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Michroma&display=swap');
+
+body {
+  font-family: Michroma, serif;
+  background: linear-gradient(90deg, #001797 0%, #000000 100%);
+}
+
+section p {
+  color: aquamarine;
+}
+
+.nav-link {
+  color: aquamarine;
+}
+
+.nav-link:hover {
+  color: rgb(77, 154, 129);
+}
+
+.navbar-nav .nav-link.active {
+  color: rgb(140, 140, 140);
+}
+
+.navbar-brand img{
+  width: 40px;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.300);
+  border-width: 0.15rem;
+}
+
+.navbar .navbar-toggler-icon {
+  opacity: 1;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); 
+}
+
+.sidebar {
+  color: aquamarine;
+  background: linear-gradient(270deg, #001797 0%, #000000 100%);
+}
+
+.card {
+  background: linear-gradient(270deg, #001797 0%, #000000 100%);
+  color: aquamarine;
+}
+
+.card a {
+  text-decoration: none;
+  color: aquamarine;
+}
+
+.slide-text {
+  color: aquamarine;
+  margin: auto auto;
+}
+
+.footer-text {
+  color: rgba(255, 255, 255, 0.5);
+  margin: auto auto;
+}
+
+footer {
+  background-color: #212529;
+  padding-block: 1rem;
+}
+
+.btn-outline-primary{
+  background: linear-gradient(270deg, #001797 0%, #000000 100%);
+}
+
+.media-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.call-anim {
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
+
+@media (max-width: 755px) {
+  .carousel-indicators {
+    display: none;
+  }
+}
