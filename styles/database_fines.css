@@ -1,0 +1,140 @@
+body {
+  min-width: 620px;
+}
+
+.main-profile {
+    width: 800px;
+    max-height: 760px;
+    padding: 40px 40px;
+    /* margin-block: 50px; */
+    border-radius: 40px;
+    background-color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 16px 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.editable {
+    cursor: pointer;
+}
+
+td.editable {
+    max-width: 100px; /* Задайте желаемую максимальную ширину */
+    word-wrap: break-word;
+    white-space: normal;
+}
+.editable td {
+    /* padding: 8px; */
+    max-width: 260px;
+}
+.long_text_data {
+    width:100px;
+}
+.long_text_time {
+    width:60px;
+}
+.long_text_type {
+    width:260px;
+    max-width: 280px; /* Задайте желаемую максимальную ширину */
+    word-wrap: break-word;
+    white-space: normal;
+}
+.long_text_fine {
+    width:100px;
+}
+
+.editable input {
+    width: calc(100% - 12px);
+    /* padding: 8px; */
+    margin: -2px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+}
+.editable input:focus {
+    background-color: rgb(226, 230, 231); /* Задайте желаемый цвет фона */
+  }
+
+.editable input:focus {
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #f4f4f4;
+    border-radius: 0 0 30px 30px;
+    margin-top: 20px;
+    padding: 20px 20px;
+}
+.main-profile button {
+    display: flex;
+    font-size: 16px;
+    width: 200px;
+    padding: 10px;
+    margin: 0px 35px 0px;
+    border: none;
+    border-radius: 12px;
+    background-color: #5AC7CE;
+    color: #fff;
+    cursor: pointer;
+}
+.main-profile button:hover {
+    background-color: #5ac6ce86;
+}
+
+#editButton {
+    display: inline-block;
+}
+
+#cancelButton,
+#saveButton {
+    display: none;
+}
+
+
+
+
+@media (max-width: 800px) {
+  body {
+      background-image: none;
+  }
+  section .main-profile {
+      max-height: none;
+      width: 100%;
+      max-height: 100%;
+      padding: 20px 0px;
+      margin-block: 0;
+      border-radius: 0;
+  }
+  .profile-bar.profile-bar.up{
+      flex-direction: column;
+      justify-content: center;
+      padding-inline: 30px;
+      border-radius: 30px 30px 0 0;
+  }
+  .profile-bar.down{
+      flex-direction: column;
+      justify-content: center;
+      background-color: #eee;
+      border-radius: 0 0 30px 30px;
+      padding-bottom: 20px;
+  }
+
+  .text_container_1024 p{
+      font-size: 16px;    
+  }
+}
