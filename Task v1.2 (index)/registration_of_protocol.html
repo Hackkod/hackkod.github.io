@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление записи</title>
+    
+    <link rel="icon" href="images\logo.PNG">
+    <link rel="stylesheet" href="styles\style.css">
+    <link rel="stylesheet" href="styles\registration_of_protocol.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header_text">
+                <p>СИСТЕМА УПРАВЛЕНИЯ БАЗАМИ ДАННЫХ</p>
+                <img src="images\logo.PNG" alt="">
+                <p>"ПРОГРАММА УЧЕТА НАРУШЕНИЙ ПДД"</p>
+                <div class="text_container_1024">
+                    <p>СИСТЕМА УПРАВЛЕНИЯ БАЗАМИ ДАННЫХ</p>
+                    <p>"ПРОГРАММА УЧЕТА НАРУШЕНИЙ ПДД"</p>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <div class="drop">
+                <button class="navbar-toggler">&#9776;</button>
+                <div class="navbar-menu">
+                    <div class="left-buttons">
+                        <a href="profile.html">Профиль</a>
+                        <div class="current">Оформление записи</div>
+                        <a href="database_fines.html">БД 'Штрафы'</a>
+                    </div>
+                    <div class="right-buttons"><a href="index.html" class="exit">Выход</a></div>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <form method="get" action="send.php">
+                <div class="main-profile"  id="reg_protocol">
+                    <p class="title">НОВАЯ ЗАПИСЬ</p>
+                    <div class="profile-bar up">
+                        <div class="left-bar">
+                            <div class="form-group selecter">
+                                <p>Нарушение:</p>
+                                <select name="select" id="">
+                                    <option value="1">Превышение скорости</option>
+                                    <option value="2">Неправильная парковка</option>
+                                    <option value="3">Неправильный обгон</option>
+                                    <option value="4">Нарушение правил проезда перекрестков</option>
+                                    <option value="5">Неправильное использование ремней безопасности</option>
+                                    <option value="6">Неправильное использование мобильного телефона</option>
+                                    <option value="7">Неправильное использование детских удерживающих систем</option>
+                                    <option value="8">Неисправности транспортного средства</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="right-bar">
+                            <div class="form-group file">
+                                <label for="file-input" class="file-input-label">Загрузить протокол</label>
+                                <input type="file" name="file_name" id="file-input" onchange="displayFileName()" >
+                                <span id="file-name"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-bar down">
+                        <div class="form-group">
+                            <label for="message">ОПИСАНИЕ</label>
+                            <textarea name="Description" id="message" rows="20"></textarea>
+                        </div>
+                
+                    </div>
+                    <div><button id="saveButton" type="submit">Отправить</button></div>
+                </div>
+            </form>    
+        </section>
+        <footer>
+            <p>&copy; 2023 Система управления базами данных.</p>
+            <p>Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script>
+        function displayFileName() {
+            const fileInput = document.getElementById('file-input');
+            const fileNameSpan = document.getElementById('file-name');
+            fileNameSpan.textContent = fileInput.files[0].name;
+        }
+    </script>
+    <script>
+        var textareas = document.getElementsByTagName('textarea');
+        for (var i = 0; i < textareas.length; i++) {
+        textareas[i].addEventListener('input', function() {
+            this.style.height = 'auto'; // Сбрасываем высоту
+            this.style.height = this.scrollHeight + 'px'; // Устанавливаем высоту равной высоте содержимого
+        });
+        }
+    </script>
+</body>
+</html>
